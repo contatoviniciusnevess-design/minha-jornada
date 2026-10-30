@@ -1,0 +1,22 @@
+MINHA JORNADA — COMO USAR
+
+1. Extraia o arquivo ZIP.
+2. Abra a pasta no VS Code.
+3. Para testar no computador, use a extensão Live Server e clique em "Go Live".
+4. No celular, para instalar como aplicativo, publique a pasta em um endereço HTTPS (por exemplo, GitHub Pages) e abra esse endereço no navegador do celular.
+5. Toque em "Definir / alterar início" em cada cartão e escolha a data em que começou.
+6. O contador atualiza automaticamente conforme os dias passam.
+
+RECURSOS
+- Contadores independentes para "sem fumar" e "sem beber".
+- Datas de início editáveis ou removíveis.
+- Marcos de 1, 7, 30 e 100 dias.
+- Exportação dos dados em JSON.
+- Salvamento local no navegador e suporte offline após o primeiro carregamento.
+- Layout adaptável para celular e computador.
+
+PRIVACIDADE
+Os dados ficam no armazenamento local do navegador deste dispositivo. Limpar os dados do navegador pode apagar os registros. Use "Exportar meus dados" para guardar uma cópia.
+
+OBSERVAÇÃO
+Este app é uma ferramenta de acompanhamento e incentivo, não substitui orientação médica ou apoio profissional. Uma recaída não apaga seu progresso; se acontecer, procure apoio e reavalie seu próximo passo.

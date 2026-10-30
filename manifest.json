@@ -1,0 +1,11 @@
+{
+  "name": "Minha Jornada - Sem Fumar e Sem Beber",
+  "short_name": "Minha Jornada",
+  "description": "Acompanhe seus dias sem fumar e sem beber.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#f3f6f2",
+  "theme_color": "#102b27",
+  "lang": "pt-BR",
+  "icons": []
+}

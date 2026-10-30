@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#102b27">
+  <meta name="description" content="Acompanhe sua jornada sem fumar e sem beber.">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
+  <title>Minha Jornada</title>
+</head>
+<body>
+  <main class="app-shell">
+    <header class="top">
+      <div class="brand-mark">✦</div>
+      <div>
+        <p class="eyebrow">UM DIA DE CADA VEZ</p>
+        <h1>Minha jornada</h1>
+      </div>
+      <button class="icon-button" id="settingsBtn" aria-label="Configurações" title="Configurações">⚙</button>
+    </header>
+
+    <section class="welcome">
+      <p class="welcome-kicker">VOCÊ ESTÁ CONSTRUINDO ALGO IMPORTANTE</p>
+      <h2>Seu progresso<br><span>merece ser celebrado.</span></h2>
+      <p class="welcome-copy">Acompanhe cada conquista. Hoje é mais um passo.</p>
+    </section>
+
+    <section class="stats-grid" aria-label="Contadores">
+      <article class="counter-card smoking">
+        <div class="card-head">
+          <span class="symbol">🚭</span>
+          <span class="status-dot"></span>
+        </div>
+        <p class="card-label">SEM FUMAR</p>
+        <div class="days-line"><strong id="smokeDays">0</strong><span>dias</span></div>
+        <p class="since" id="smokeSince">Início não definido</p>
+        <div class="progress-track"><div class="progress-fill" id="smokeProgress"></div></div>
+        <p class="milestone" id="smokeMilestone">Seu próximo marco está esperando por você.</p>
+        <button class="card-action" data-edit="smoke">Definir / alterar início <span>↗</span></button>
+      </article>
+
+      <article class="counter-card drinking">
+        <div class="card-head">
+          <span class="symbol">🥤</span>
+          <span class="status-dot"></span>
+        </div>
+        <p class="card-label">SEM BEBER</p>
+        <div class="days-line"><strong id="drinkDays">0</strong><span>dias</span></div>
+        <p class="since" id="drinkSince">Início não definido</p>
+        <div class="progress-track"><div class="progress-fill" id="drinkProgress"></div></div>
+        <p class="milestone" id="drinkMilestone">Seu próximo marco está esperando por você.</p>
+        <button class="card-action" data-edit="drink">Definir / alterar início <span>↗</span></button>
+      </article>
+    </section>
+
+    <section class="quote-card">
+      <span class="quote-icon">✧</span>
+      <div>
+        <p class="quote" id="dailyQuote">Pequenas escolhas, repetidas todos os dias, constroem grandes mudanças.</p>
+        <p class="quote-caption">LEMBRETE DO DIA</p>
+      </div>
+    </section>
+
+    <section class="milestones-section">
+      <div class="section-heading">
+        <div><p class="eyebrow">CADA CONQUISTA CONTA</p><h2>Seus marcos</h2></div>
+        <span class="section-icon">🏁</span>
+      </div>
+      <div class="milestone-list" id="milestoneList">
+        <div class="milestone-row"><span>🌱</span><div><strong>Primeiro dia</strong><small>O começo de uma nova fase</small></div><span class="check">✓</span></div>
+        <div class="milestone-row"><span>🌿</span><div><strong>7 dias</strong><small>Uma semana de dedicação</small></div><span class="check">✓</span></div>
+        <div class="milestone-row"><span>🌳</span><div><strong>30 dias</strong><small>Um mês de progresso</small></div><span class="check">✓</span></div>
+        <div class="milestone-row"><span>🏆</span><div><strong>100 dias</strong><small>Uma conquista especial</small></div><span class="check">✓</span></div>
+      </div>
+    </section>
+
+    <footer>
+      <p>Seu caminho é único. Se um dia for difícil, recomeçar também é coragem.</p>
+      <small>Seus dados ficam salvos neste dispositivo.</small>
+    </footer>
+  </main>
+
+  <dialog id="dateDialog">
+    <form method="dialog" id="dateForm">
+      <div class="dialog-top"><span class="dialog-symbol" id="dialogSymbol">🚭</span><button class="close-btn" value="cancel" aria-label="Fechar">×</button></div>
+      <p class="eyebrow">REGISTRE SEU COMEÇO</p>
+      <h2 id="dialogTitle">Sem fumar</h2>
+      <p class="dialog-copy">Escolha a data em que começou sua jornada. Você pode atualizar essa informação quando quiser.</p>
+      <label for="startDate">Data de início</label>
+      <input type="date" id="startDate" required>
+      <div class="dialog-actions">
+        <button type="button" class="secondary-btn" id="clearDate">Limpar</button>
+        <button type="submit" class="primary-btn">Salvar data</button>
+      </div>
+    </form>
+  </dialog>
+
+  <dialog id="settingsDialog">
+    <form method="dialog">
+      <div class="dialog-top"><span class="dialog-symbol">⚙️</span><button class="close-btn" value="cancel" aria-label="Fechar">×</button></div>
+      <p class="eyebrow">PREFERÊNCIAS</p>
+      <h2>Configurações</h2>
+      <p class="dialog-copy">O contador usa a data local do seu aparelho e salva os registros somente neste navegador.</p>
+      <button type="button" class="secondary-btn full" id="exportBtn">Exportar meus dados</button>
+      <button type="button" class="secondary-btn full" id="installBtn" hidden>Instalar aplicativo</button>
+      <p class="privacy-note">Não coletamos nem enviamos seus dados para servidores.</p>
+    </form>
+  </dialog>
+
+  <div class="toast" id="toast" role="status"></div>
+  <script src="app.js"></script>
+</body>
+</html>
